@@ -43,5 +43,11 @@ body {
          font_url('chunkfive-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+.invalid-feedback {
+  color: #ff333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
 }
