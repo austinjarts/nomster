@@ -1,4 +1,13 @@
 <div class="booyah-box col-10 offset -1">
+  <% @place.photos.each do |photo| %>
+    <div>
+      <% if photo.present? %>
+          <b><%= photo %></b>
+      <% end %>
+      <%= photo.caption %>
+    </div>
+  <% end %>
+
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br/><br/>
