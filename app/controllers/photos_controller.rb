@@ -6,11 +6,15 @@ class PhotosController < ApplicationController
      @place.photos.create(photo_params.merge(user: current_user))
      redirect_to place_path(@place)
 
+    if @place.user != current_user
+    return render plain: 'Not Allowed', status: :forbidden
+    end
+
   end
 
     private
 
   def photo_params
-    params.require(:photo).permit(:caption)
+    params.require(:photo).permit(:caption, :picture)
   end
 end
