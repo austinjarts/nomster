@@ -51,6 +51,16 @@
 
 
 
+  <% if place.photos.present? %> 
+    <div>
+      <% if place.photos.last.picture.present? %>
+        <%= place.photos.last.picture %>
+      <% end %>
+      <%= place.photos.last.caption %>
+    </div>
+  <% end %>
+
+
 
 
   </div>
